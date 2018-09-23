@@ -10,7 +10,19 @@ and Color primiary using the color tool.
 - Naming conventions were followed for code readability.   
 - Made sure no class or functions does anything other than it was suppose to do to further improve code readability. 
 - Added Glide for image handling in thread. Used parameters to maintain the Aspect Ratio of Image. 
--
+
+Side note 
+Added Thread.sleep code for your convenience in FetchDataAsync.class to test loading indicator at bottom of 
+list.
+```sh
+ // Uncomment this out to see the Indicator bar at the End.
+        /*try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
+```
+
 Technical Designs for future improvements: 
 - HttpRequest.class needs network detections and Http retry and error handling, perhaps I should have used OKHttp.
 -Improve image loading time and pre-load / storage in sqlite or interal cache storage.
