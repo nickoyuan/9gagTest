@@ -2,6 +2,7 @@ package com.a9gag.nick.testapplication;
 
 
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 

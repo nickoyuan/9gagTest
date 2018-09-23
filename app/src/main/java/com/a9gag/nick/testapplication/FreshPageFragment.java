@@ -4,6 +4,7 @@ package com.a9gag.nick.testapplication;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +23,7 @@ public class FreshPageFragment extends Fragment {
     public static boolean isLoading = false;
     CustomListAdapter customList;
     ArrayList<GagsData> gagsData;
-
+    View view = null;
     public FreshPageFragment() {
         // Required empty public constructor
     }
@@ -30,7 +31,7 @@ public class FreshPageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_fresh_page, container, false);
+        view = inflater.inflate(R.layout.fragment_fresh_page, container, false);
         list = (ListView) view.findViewById(R.id.jsonlist);
 
         mProgressBarFooter = ((LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE))
@@ -59,4 +60,17 @@ public class FreshPageFragment extends Fragment {
         mTask.execute();
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser && view != null) {
+            fetchDataAsync();
+        }
+    }
 }
