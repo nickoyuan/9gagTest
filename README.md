@@ -29,4 +29,4 @@ Technical Designs for future improvements:
 - Using RecyclerView instead of ListView. 
 -Retry for failed loading of Images. Glide has callback and listeners.
 - To think of a good architecture for allowing one Class to handle all three fragments Hot,Trending and fresh instead of three seperate Classes.
--Using a Uri.Builder for URL "https://mock-api.9gaginc.com/" instead of exposing it as a String. (privacy)
+-Using a Uri.Builder for URL "/" instead of exposing it as a String. (privacy)
