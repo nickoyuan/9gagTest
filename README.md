@@ -1,4 +1,4 @@
-# Deliverables for 9Gag
+nickosample
 
 Any Design Pattern or arichitecture that you have adopted and why you are using this pattern:
 - Followed the Android material design colours for Primary, Primary Dark 
